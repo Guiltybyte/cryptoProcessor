@@ -16,9 +16,7 @@ entity register_file is
 end register_file;
 
 architecture Behavioral of register_file is
-  -- 2**M-1 is the number of address that can be addressed by an n-bit vector     
   type memory is array(0 to 2**M-1) of std_logic_vector(N-1 downto 0);
-  -- Initialize RAM to weird values for sake of the test
   signal RAM : memory := (
     0 => x"0001", 1 => x"c505", 2 => x"3c07",
     3 => x"d405", 4 => x"1186", 5 => x"f407",
